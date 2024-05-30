@@ -1,0 +1,16 @@
+## created a user venkat_qs_test
+
+vj@mbp-vj ~ % aws quicksight list-users --aws-account-id 123456789012 --namespace default
+
+An error occurred (AccessDeniedException) when calling the ListUsers operation: User: arn:aws:iam::123456789012:user/venkat_qs_test is not authorized to perform: quicksight:ListUsers on resource: arn:aws:quicksight:us-east-1:123456789012:user/default/* because no identity-based policy allows the quicksight:ListUsers action
+vj@mbp-vj ~ % aws quicksight generate-embed-url-for-registered-user \
+    --aws-account-id 123456789012 \
+    --session-lifetime-in-minutes 600 \
+    --user-arn arn:aws:quicksight:us-east-1:123456789012:user/default/venkat_j \
+    --experience-configuration QuickSightConsole={InitialPath="/start/dashboards"}
+
+An error occurred (AccessDeniedException) when calling the GenerateEmbedUrlForRegisteredUser operation: User: arn:aws:iam::123456789012:user/venkat_qs_test is not authorized to perform: quicksight:GenerateEmbedUrlForRegisteredUser on resource: arn:aws:quicksight:us-east-1:123456789012:user/default/venkat_j because no identity-based policy allows the quicksight:GenerateEmbedUrlForRegisteredUser action
+vj@mbp-vj ~ %
+
+
+## update the roles now..

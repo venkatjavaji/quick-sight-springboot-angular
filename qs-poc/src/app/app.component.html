@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li><a routerLink="/console" routerLinkActive="active">Console</a></li>
+    </ul>
+</nav>
+<p>QuickSight Selected User : {{selectedValue}} </p>
+<div>
+    <label for="options">Choose an option:</label>
+    <select id="options" (change)="onSelectionChange($event)">
+        <option value="0">select a User</option>
+        <option value="venkat_j">Admin User (IAM+QuickSight)</option>
+        <option value="venkat_qs_test">Dev User (IAM+QuickSight)</option>
+        <option value="venkat_qs_nonaws">Normal User (QuickSight)</option>
+    </select>
+</div>
+<router-outlet></router-outlet>

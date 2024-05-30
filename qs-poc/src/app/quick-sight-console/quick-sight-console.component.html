@@ -1,0 +1,6 @@
+<p>quick-sight-console works!</p>
+
+<div *ngIf="loadingError">Dashboard loading failed..</div>
+<div *ngIf="quickSightConsoleEmbedUrl">
+    <iframe width="100%" height="720" [src]="quickSightConsoleEmbedUrl | safeUrl"></iframe>
+</div>
